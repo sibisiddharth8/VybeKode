@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "numberDisplay": "1",
+    "title": "APAC Release Feedback Requirement",
+    "description": "Compare the ROW Release Dump file with the 1.4 Open Demand requirements.\n\nKey Steps & Requirements:\n1. Match each released profile against the open demands based on:\n   • Primary Skill\n   • Secondary Skill\n   • Experience Level\n   • Location\n2. For profiles that match an open demand, mark the status as “Evaluation in Progress” against the column APAC1.4.\n3. For profiles that do not match any current open demand, mark the status as “Not Suitable for Open Demand.”\n4. Identify profiles for which evaluation or feedback is still pending.\n5. Share the pending cases with the Delivery Team through email for necessary action.\n6. Maintain a separate Excel file containing all pending feedback cases to enable regular tracking and closure."
+  },
+  {
+    "id": 2,
+    "numberDisplay": "2",
+    "title": "Employee Delta Tracker",
+    "description": "Develop an Employee Delta Tracker that compares yesterday’s and today’s Excel files using Employee Number and Employee Name as the primary matching fields.\n\nKey Requirements:\n• The tracker should identify and report all fresh employee records available in today’s file that were not present in yesterday’s file.\n• The output must be a new Excel file containing all records, with an additional column indicating the record status.\n• Newly identified records should be marked as “New”.\n• Existing records should be populated with the appropriate reason/status based on the comparison."
+  },
+  {
+    "id": 3,
+    "numberDisplay": "3",
+    "title": "Revenue and Cost Consolidated Yearly Tracker",
+    "description": "Generate a consolidated Excel file by appending all quarterly Revenue and Cost report files.\n\nProblem Statement:\nThe Revenue and Cost reports are currently consolidated manually every quarter by appending multiple files, which is time-consuming and prone to errors.\n\nKey Requirements:\n• Combine all quarterly report files into a single Excel file.\n• Include all columns available across the source files.\n• Accommodate any additional or unmatched columns from individual files.\n• Populate available data where present.\n• Leave cells blank where a column is not available in a particular source file.\n• Maintain a consistent column structure across the consolidated output.\n\nExpected Output:\nA single consolidated Excel file that contains data from all quarterly Revenue and Cost reports, includes all common and additional columns, leaves unavailable fields blank, and eliminates manual quarterly consolidation."
+  },
+  {
+    "id": 4,
+    "numberDisplay": "4",
+    "title": "ODC Access Tracker (Employee Access Validation)",
+    "description": "Validate employee ODC access by comparing approval dates against actual swipe records from the Exalog Report.\n\nProblem Statement:\nSome employees may be logging into the ODC before their activation date or after their end date. Records with a future activation date can be ignored.\n\nKey Requirements:\n• Source File: Exalog Report.\n• Validate employee access by comparing the relevant date fields available in Column B and Column H.\n• Identify employees who entered the ODC before their activation date.\n• Identify employees who accessed the ODC after their end date.\n• Exclude/ignore employees with future activation dates.\n\nExpected Output:\nGenerate an Excel report containing all relevant employee details that highlights employees who entered before their activation date, highlights employees who accessed after their end date, and ignores employees with future activation dates to ensure employee entry records align with approved dates."
+  },
+  {
+    "id": 5,
+    "numberDisplay": "5",
+    "title": "Revenue Comparison Report: Projection Vs System Revenue",
+    "description": "Perform weekly revenue comparison between Projection and System Revenue when the Ops file is available in the folder.\n\nKey Requirements:\n1. Select the Revenue Report from the Ops file and make the following updates:\n   • Add a Portfolio column next to Project Number. Populate it using a VLOOKUP of Project Number against the WON Master file. If no match is found, enter \"Not found\".\n   • Add a Contract Description column next to Contract Id. Populate it using a VLOOKUP of Contract Id against the WON Master file. If no match is found, enter \"Not found\".\n   • If the BINR column is missing, add it next to Projected Alloc Amt Beacon (INR) and calculate it as: Projected Alloc Amt Beacon (INR) / 10^7.\n   • Add a Remarks column next to Portfolio.\n2. Create a Pivot Table for the Revenue Report using:\n   • Customer filter: Keep only Standard Chartered Bank; Standard Chartered Global Business Services Sdn Bhd; Standard Chartered Global Business Services Private Limited; and TRUST BANK SINGAPORE LIMITED.\n   • Rows: Contract Id and Contract Description.\n   • Columns: Period.\n   • Values: BINR.\n3. For any additional project numbers in the Revenue Report, enter “Newly Added WONs” in the Remarks column.\n4. Compare current system contract revenue with the contract-wise projection revenue file by updating the revenue amount based on the Project Type Final.\n5. Add two columns: IOU RR Date and IOU RR Date Gap, and update the IOU RR Date Comparison Remarks accordingly."
+  },
+  {
+    "id": 6,
+    "numberDisplay": "6",
+    "title": "WON Master File & Tracker",
+    "description": "Create and maintain the WON (Work Order Number) Master File weekly once when the Ops file is available in the folder.\n\nKey Requirements:\n1. Select the PROJECT REPORT and create a new WON file for every Project.\n2. Compare it with the WON MASTER and add all additional columns from the WON MASTER to the new file.\n3. Under End Client Customer, retain only:\n   • Standard Chartered Bank\n   • Standard Chartered Global Business Services Sdn Bhd\n   • Standard Chartered Global Business Services Private Limited\n   • TRUST BANK SINGAPORE LIMITED\n4. Under Contract Id, remove rows containing “-” or “N/A” and retain the remaining rows.\n5. Arrange columns in the exact same order as the WON MASTER and apply the same header colours.\n6. Format all date columns as dd-mmm-yy.\n7. Sort the new WON file by Project Creation Date, from newest to oldest.\n8. Apply status colour coding to Project Status:\n   • Active – Green\n   • Approve – Orange\n   • Close or Pending Close – Dark Red\n   • Rejected or Draft – Yellow\n9. For all additional project numbers, update “Newly Added WONs” in the Remarks column."
+  },
+  {
+    "id": 7,
+    "numberDisplay": "7",
+    "title": "Revenue and Cost Consolidated Yearly Tracker",
+    "description": "Generate a consolidated Excel file by appending all quarterly Revenue and Cost report files.\n\nProblem Statement:\nThe Revenue and Cost reports are currently consolidated manually every quarter by appending multiple files, which is time-consuming and prone to errors.\n\nKey Requirements:\n• Combine all quarterly report files into a single Excel file.\n• Include all columns available across the source files.\n• Accommodate any additional or unmatched columns from individual files.\n• Populate available data where present.\n• Leave cells blank where a column is not available in a particular source file.\n• Maintain a consistent column structure across the consolidated output.\n\nExpected Output:\nA single consolidated Excel file that contains data from all quarterly Revenue and Cost reports, includes all common and additional columns, leaves unavailable fields blank, and eliminates manual quarterly consolidation."
+  },
+  {
+    "id": 8,
+    "numberDisplay": "8",
+    "title": "ODC Access Tracker (Employee Access Validation)",
+    "description": "Validate employee ODC access by comparing approval dates against actual swipe records from the Exalog Report.\n\nProblem Statement:\nSome employees may be logging into the ODC before their activation date or after their end date. Records with a future activation date can be ignored.\n\nKey Requirements:\n• Source File: Exalog Report.\n• Validate employee access by comparing the relevant date fields available in Column B and Column H.\n• Identify employees who entered the ODC before their activation date.\n• Identify employees who accessed the ODC after their end date.\n• Exclude/ignore employees with future activation dates.\n\nExpected Output:\nGenerate an Excel report containing all relevant employee details that highlights employees who entered before their activation date, highlights employees who accessed after their end date, and ignores employees with future activation dates to ensure employee entry records align with approved dates."
+  },
+  {
+    "id": 9,
+    "numberDisplay": "9",
+    "title": "Revenue Comparison Report: Projection Vs System Revenue",
+    "description": "Perform weekly revenue comparison between Projection and System Revenue when the Ops file is available in the folder.\n\nKey Requirements:\n1. Select the Revenue Report from the Ops file and make the following updates:\n   • Add a Portfolio column next to Project Number. Populate it using a VLOOKUP of Project Number against the WON Master file. If no match is found, enter \"Not found\".\n   • Add a Contract Description column next to Contract Id. Populate it using a VLOOKUP of Contract Id against the WON Master file. If no match is found, enter \"Not found\".\n   • If the BINR column is missing, add it next to Projected Alloc Amt Beacon (INR) and calculate it as: Projected Alloc Amt Beacon (INR) / 10^7.\n   • Add a Remarks column next to Portfolio.\n2. Create a Pivot Table for the Revenue Report using:\n   • Customer filter: Keep only Standard Chartered Bank; Standard Chartered Global Business Services Sdn Bhd; Standard Chartered Global Business Services Private Limited; and TRUST BANK SINGAPORE LIMITED.\n   • Rows: Contract Id and Contract Description.\n   • Columns: Period.\n   • Values: BINR.\n3. For any additional project numbers in the Revenue Report, enter “Newly Added WONs” in the Remarks column.\n4. Compare current system contract revenue with the contract-wise projection revenue file by updating the revenue amount based on the Project Type Final.\n5. Add two columns: IOU RR Date and IOU RR Date Gap, and update the IOU RR Date Comparison Remarks accordingly."
+  },
+  {
+    "id": 10,
+    "numberDisplay": "10",
+    "title": "WON Master File & Tracker",
+    "description": "Create and maintain the WON (Work Order Number) Master File weekly once when the Ops file is available in the folder.\n\nKey Requirements:\n1. Select the PROJECT REPORT and create a new WON file for every Project.\n2. Compare it with the WON MASTER and add all additional columns from the WON MASTER to the new file.\n3. Under End Client Customer, retain only:\n   • Standard Chartered Bank\n   • Standard Chartered Global Business Services Sdn Bhd\n   • Standard Chartered Global Business Services Private Limited\n   • TRUST BANK SINGAPORE LIMITED\n4. Under Contract Id, remove rows containing “-” or “N/A” and retain the remaining rows.\n5. Arrange columns in the exact same order as the WON MASTER and apply the same header colours.\n6. Format all date columns as dd-mmm-yy.\n7. Sort the new WON file by Project Creation Date, from newest to oldest.\n8. Apply status colour coding to Project Status:\n   • Active – Green\n   • Approve – Orange\n   • Close or Pending Close – Dark Red\n   • Rejected or Draft – Yellow\n9. For all additional project numbers, update “Newly Added WONs” in the Remarks column."
+  }
+]
